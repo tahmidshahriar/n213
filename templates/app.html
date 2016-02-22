@@ -1,0 +1,56 @@
+
+<html lang="en">
+<script>
+function myFunction() {
+  var a = new Date();
+  console.log(a);
+    var x;
+    if (confirm("Press a button!") == true) {
+        x = "You pressed OK!";
+    } else {
+        x = "You pressed Cancel!";
+    }
+    var b = new Date();
+    var d = b- a;
+    var g = "/val/" + d
+    console.log(g)
+    window.location.href= g;
+}
+
+function t () {
+  var a = Math.random()
+  v = (a * 1000 * 60 * 2)
+  console.log(v)
+  setTimeout(myFunction, v);
+}
+
+</script>
+
+
+
+  <head>
+    <title> ToDo</title>    
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+  <div class="containers">
+  
+
+
+<button onclick="t()">Click when ready</button>
+
+<p id="demo"></p>
+
+          {% for post in myList %}
+            <div>
+            {{post ["time"]  }}
+            </div>
+            <div class="seperator"></div>   
+          {% endfor %}
+
+  </div>
+
+
+  </body>
+  </html>
